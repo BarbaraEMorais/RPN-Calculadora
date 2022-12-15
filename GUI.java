@@ -6,7 +6,7 @@ public class GUI extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-                        
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jButton12 = new javax.swing.JButton();
@@ -37,7 +37,7 @@ public class GUI extends javax.swing.JFrame {
 
         screen.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         screen.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        screen.setText("0");
+        screen.setText("");
         screen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 screenActionPerformed(evt);
@@ -121,14 +121,14 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        btnDivisao.setText("%");
+        btnDivisao.setText("/");
         btnDivisao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDivisaoActionPerformed(evt);
             }
         });
 
-        btnMultiplica.setText("x");
+        btnMultiplica.setText("*");
         btnMultiplica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMultiplicaActionPerformed(evt);
@@ -163,12 +163,8 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        btnDelete.setText("DEL");
-        btnDelete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteActionPerformed(evt);
-            }
-        });
+        btnDelete.setText("");
+        
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -267,7 +263,7 @@ public class GUI extends javax.swing.JFrame {
         );
 
         pack();
-    }//editor                      
+    }// </editor-fold>                        
 
     private void screenActionPerformed(java.awt.event.ActionEvent evt) {                                       
         
@@ -275,85 +271,93 @@ public class GUI extends javax.swing.JFrame {
 
     private void btnNoveActionPerformed(java.awt.event.ActionEvent evt) {                                        
         System.out.print("9");
+        screen.setText(screen.getText()+"9");
     }                                       
 
     private void btnACActionPerformed(java.awt.event.ActionEvent evt) {                                      
-        System.out.print("AC");
+        screen.setText("");
     }                                     
 
     private void btnTresActionPerformed(java.awt.event.ActionEvent evt) {                                        
         System.out.print("3");
+        screen.setText(screen.getText()+"3");
     }                                       
 
     private void btnEnterActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        System.out.print("E");
+        FuncoesUI.selecionaBotao(screen.getText());
+        screen.setText("");
     }                                        
 
     private void btnSeteActionPerformed(java.awt.event.ActionEvent evt) {                                        
         System.out.print("7");
+        screen.setText(screen.getText()+"7");
     }                                       
 
     private void btnOitoActionPerformed(java.awt.event.ActionEvent evt) {                                        
         System.out.print("8");
+        screen.setText(screen.getText()+"8");
     }                                       
 
     private void btnDivisaoActionPerformed(java.awt.event.ActionEvent evt) {                                           
-        System.out.print("/");
+        FuncoesUI.selecionaBotao(btnDivisao.getText());
+        screen.setText(FuncoesUI.printaResultado());
     }                                          
 
     private void btnQuatroActionPerformed(java.awt.event.ActionEvent evt) {                                          
         System.out.print("4");
+        screen.setText(screen.getText()+"4");
     }                                         
 
     private void btnCincoActionPerformed(java.awt.event.ActionEvent evt) {                                         
         System.out.print("5");
+        screen.setText(screen.getText()+"5");
     }                                        
 
     private void btnSeisActionPerformed(java.awt.event.ActionEvent evt) {                                        
         System.out.print("6");
-    }                                       
-
-    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        System.out.print("DEL");
-    }                                         
+        screen.setText(screen.getText()+"6");
+    }                                                                           
 
     private void btnSomaActionPerformed(java.awt.event.ActionEvent evt) {                                        
-        System.out.print("+");
+        FuncoesUI.selecionaBotao(btnSoma.getText());
+        screen.setText(FuncoesUI.printaResultado());
     }                                       
 
     private void btnUmActionPerformed(java.awt.event.ActionEvent evt) {                                      
         System.out.print("1");
+        screen.setText(screen.getText()+"1");
     }                                     
 
     private void btnDoisActionPerformed(java.awt.event.ActionEvent evt) {                                        
         System.out.print("2");
+        screen.setText(screen.getText()+"2");
     }                                       
 
     private void btnSubtracaoActionPerformed(java.awt.event.ActionEvent evt) {                                             
-        System.out.print("-");
+        FuncoesUI.selecionaBotao(btnSubtracao.getText());
+        screen.setText(FuncoesUI.printaResultado());
     }                                            
 
     private void btnMultiplicaActionPerformed(java.awt.event.ActionEvent evt) {                                              
-        System.out.print("*");
+        FuncoesUI.selecionaBotao(btnMultiplica.getText());
+        screen.setText(FuncoesUI.printaResultado());
     }                                             
 
     private void btnZeroActionPerformed(java.awt.event.ActionEvent evt) {                                        
         System.out.print("0");
+        screen.setText(screen.getText()+"0");
     }                                       
 
     private void btnPontoActionPerformed(java.awt.event.ActionEvent evt) {                                         
         System.out.print(".");
+        screen.setText(screen.getText()+".");
     }                                        
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {

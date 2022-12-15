@@ -65,11 +65,13 @@ public class Numeros {
 
 		
 		if(numero.getComplexo() != 0 && this.numeroComplexo!=0){
+			System.out.println("Não é possível realizar a divisão de complexo por complexo");
 			return null; //fazer exceção se der tempo
 		}
 
-		if(numero.getComplexo() == 0){
-
+		//quando 
+		if(numero.getComplexo() != 0 && this.numeroComplexo==0){
+			System.out.println("Não é possível dividir um complexo por real");
 			return null;
 		}
 		else{

@@ -7,9 +7,12 @@ public class Main{
     
     //instanciando console
     Console console = new Console();
+    GUI ui = new GUI();
     
-    //iniciando console
-    console.inicia();
+    //Descomente para iniciar o console
+    //console.inicia();
+
+    GUI.main(args);   
 
     }
 }

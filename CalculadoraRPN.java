@@ -17,7 +17,12 @@ public class CalculadoraRPN {
     }
 
     public void adicionaElemento(Numeros v){
-        pilha.add(v);
+        if(v==null)
+			System.out.println("ta indo nulo");
+		else{
+			pilha.add(v);
+		}
+		
     }
 
 	//recebe um operador e realiza a operação
@@ -53,16 +58,18 @@ public class CalculadoraRPN {
 		}
 		
 		//adiciona valor na pilha
-		pilha.add(resultado);
+		adicionaElemento(resultado);
 	}
 
 	public Numeros getUltimoElemento(){
 
 		Numeros ultimoPilha, auxiliarPilha;
+		
 
 		if(pilha.size() > 0) {
 
 			ultimoPilha = pilha.pop();
+			System.out.println(ultimoPilha);
 			auxiliarPilha = new Numeros(ultimoPilha.getReal(), ultimoPilha.getComplexo());
 			pilha.add(ultimoPilha);
 
