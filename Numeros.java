@@ -81,7 +81,17 @@ public class Numeros {
 	}
 
 	public String toString() {
-		return String.valueOf(getReal());
+
+		String valorConcat = new String();
+
+		if(getComplexo()!=0){
+			valorConcat = String.valueOf(getReal()) + " " + String.valueOf(getComplexo());
+		}
+		else{
+			valorConcat = String.valueOf(getReal());
+		}
+
+		return valorConcat;
 	}
 	
 }

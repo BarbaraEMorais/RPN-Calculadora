@@ -31,7 +31,6 @@ public class Console{
         Numeros valor;
         
         //- Captar inputs do teclado via terminal
-        System.out.println("Digite");
         entrada = teclado.nextLine();
 
         //- Validar inputs só vou exibir mensagem de erro usando try catch
@@ -88,8 +87,7 @@ public class Console{
     }
 
     private void printaResultado(){
-        System.out.println(calculadora.getUltimoElemento());
+        System.out.println(calculadora.getUltimoElemento().toString());
     }
-
   
 }
